@@ -1,17 +1,21 @@
-import React from 'react';
+import React from 'react';  
+import {FaBars, FaTimes} from 'react-icons/fa'
 
 const NavBar = (props) => {
     return(
         <header>
-            <h2 className='logo'>Kalvin Tang</h2>
-            <nav>
-                <ul className='nav__links'>
-                    <li><a href="#">About Me</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Something Else</a></li>
-                </ul>
-            </nav>
-            <a href="#" className="cta"><button>Contact</button></a>
+            <div className='nav_bar'>
+                <h2 className='logo'>Kalvin Tang</h2>
+                <div className='lynx'>
+                    <a href="#">About Me</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Something</a>
+                </div>
+                <a href="#"><button className="action_btn">Contact</button></a>
+                <div className='toggle-btn'>
+                    <FaBars/>
+                </div>
+            </div>
         </header>
     )
 }

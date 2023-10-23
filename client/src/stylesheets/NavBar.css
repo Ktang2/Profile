@@ -1,15 +1,84 @@
-li, a, h2, button {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
 }
 
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    font-size: 1rem;
+}
+
+h2 {
+    color:white;
+}
+
+a:hover {
+    color:orange;
+}
+
+/* Header */
 header {
-    background-color: #24252A;
+    position: relative;
+    padding: 0 2rem;
+    background-color: darkslategrey;
+}
+
+.nav_bar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    align-items:center;
     justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
+}
+
+.nav_bar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo:hover {
+    color:orange;
+}
+
+.nav_bar .lynx {
+    display:flex;
+    gap: 6rem;
+}
+
+.nav_bar .toggle-btn {
+    color:darkgray;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display:none;
+}
+
+.action_btn{
+    background-color: orange;
+    color:#fff;
+    padding: 0.5rem 1rem;
+    border:none;
+    outline:none;
+    border-radius:20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover{
+    scale:1.05;
+    color:#fff;
+}
+
+.action_btn:active{
+    scale:0.95;
 }
