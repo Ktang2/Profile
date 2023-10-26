@@ -1,0 +1,125 @@
+nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f4b51;
+    position: sticky;
+    top: 0;
+}
+
+nav .title {
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+}
+
+/* highlights link that is active on navbar */
+.active {
+    background-color: #406666;
+    color: orange;
+}
+
+nav ul li a:not(.active):hover {
+    background-color: #386262;
+}
+
+nav .menu {
+    display:none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 1.65rem;
+}
+
+nav .menu:hover {
+    cursor: pointer;
+}
+
+nav .menu span {
+    height: 0.25rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.2rem;
+}
+
+.contact-btn{
+    background-color: orange;
+    color:#fff;
+    padding: 0.5rem 1rem;
+    border:none;
+    outline:none;
+    border-radius:20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.contact-btn:hover{
+    scale:1.05;
+    color:#fff;
+}
+
+.contact-btn:active{
+    scale:0.95;
+}
+
+/* Responsive styling */
+@media (max-width: 580px) {
+    nav .menu {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 1rem;
+        gap: 0.5rem;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        margin: 0.2rem 0.5rem;
+    }
+    .contact-btn{
+        margin-top: 0.25rem;
+    }
+}

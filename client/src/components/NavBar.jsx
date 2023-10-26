@@ -1,22 +1,26 @@
-import React from 'react';  
-import {FaBars, FaTimes} from 'react-icons/fa'
+import React, {useState} from "react";
+import {Link, NavLink} from 'react-router-dom';
+import {FaBars, FaTimes} from "react-icons/fa";
+import './NavBar.css'
 
-const NavBar = (props) => {
+const NavBar = () =>{
+    const[menuOpen, setMenuOpen] = useState(false);
+
     return(
-        <header>
-            <div className='nav_bar'>
-                <h2 className='logo'>Kalvin Tang</h2>
-                <div className='lynx'>
-                    <a href="#">About Me</a>
-                    <a href="#">Projects</a>
-                    <a href="#">Something</a>
-                </div>
-                <a href="#"><button className="action_btn">Contact</button></a>
-                <div className='toggle-btn'>
-                    <FaBars/>
-                </div>
+        <nav>
+            <Link to="/" className="title">Kalvin Tang</Link>
+            <div className="menu" onClick={(e) => {setMenuOpen(!menuOpen)}}>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </header>
+            <ul className={menuOpen ? "open" : ""}>
+                <li><NavLink to="/about">About</NavLink></li>
+                <li><NavLink to="/projects">Projects</NavLink></li>
+                <li><NavLink to="/services">Services</NavLink></li>
+                <li><button className="contact-btn">Contact</button></li>
+            </ul>
+        </nav>
     )
 }
 
