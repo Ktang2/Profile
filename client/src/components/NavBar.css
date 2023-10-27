@@ -5,6 +5,7 @@ nav {
     background-color: #1f4b51;
     position: sticky;
     top: 0;
+    margin-bottom: 3rem;
 }
 
 nav .title {
