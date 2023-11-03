@@ -89,6 +89,15 @@ nav .menu span {
     scale:0.95;
 }
 
+.link-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.link-icon {
+    color: rgb(190, 190, 190);
+}
+
 /* Responsive styling */
 @media (max-width: 580px) {
     nav .menu {
